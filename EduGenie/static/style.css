@@ -1,0 +1,139 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f4f7fb;
+  line-height: 1.6;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.container {
+  width: min(980px, 92%);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-size: .78rem;
+  letter-spacing: .12em;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+h1 { font-size: clamp(2.4rem, 7vw, 4.8rem); margin: 0; line-height: 1; }
+h2 { margin-top: 0; }
+
+.hero p:not(.eyebrow) {
+  max-width: 650px;
+  font-size: 1.08rem;
+  color: #5b6475;
+}
+
+.badge {
+  background: white;
+  border: 1px solid #dce3ef;
+  padding: 8px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.card {
+  background: white;
+  border: 1px solid #dce3ef;
+  border-radius: 20px;
+  padding: 24px;
+  margin-top: 18px;
+  box-shadow: 0 12px 30px rgba(25, 45, 80, .06);
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin: 14px 0 7px;
+}
+
+select, textarea, input {
+  width: 100%;
+  border: 1px solid #ccd5e3;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font: inherit;
+  background: white;
+}
+
+textarea { resize: vertical; min-height: 180px; }
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+#submitBtn { width: 100%; }
+
+.secondary {
+  margin-top: 0;
+  padding: 8px 12px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result {
+  white-space: pre-wrap;
+}
+
+.quiz-question {
+  border-top: 1px solid #e5e9f0;
+  padding: 18px 0;
+}
+
+.quiz-question:first-child { border-top: 0; }
+
+.option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #f7f9fc;
+  border: 1px solid #dce3ef;
+  margin-top: 9px;
+}
+
+.option.correct { outline: 2px solid #31a56d; }
+.option.incorrect { outline: 2px solid #d65c5c; }
+
+.answer-note {
+  margin-top: 10px;
+  color: #596274;
+}
+
+.status { min-height: 1.5em; color: #5b6475; }
+.hidden { display: none; }
+
+footer {
+  margin-top: 28px;
+  color: #6a7382;
+  font-size: .9rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .hero { flex-direction: column; }
+}

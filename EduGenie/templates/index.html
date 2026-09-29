@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduGenie — Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">AI LEARNING ASSISTANT</p>
+        <h1>EduGenie</h1>
+        <p>Ask, understand, practise, summarize, and plan your learning with Gemini.</p>
+      </div>
+      <div class="badge">Gemini-powered</div>
+    </header>
+
+    <section class="card">
+      <label for="task">Choose a task</label>
+      <select id="task">
+        <option value="qa">Ask a Question</option>
+        <option value="explain">Explain a Concept</option>
+        <option value="quiz">Generate Quiz</option>
+        <option value="summarize">Summarize Text</option>
+        <option value="learn">Learning Path</option>
+      </select>
+
+      <label for="inputText">Your input</label>
+      <textarea id="inputText" rows="10" placeholder="For example: Explain photosynthesis to a beginner."></textarea>
+
+      <div id="quizOptions" class="quiz-options hidden">
+        <label for="numQuestions">Number of questions</label>
+        <input id="numQuestions" type="number" min="1" max="10" value="3">
+      </div>
+
+      <button id="submitBtn">Run EduGenie</button>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section id="resultCard" class="card result-card hidden">
+      <div class="result-header">
+        <h2>Result</h2>
+        <button id="copyBtn" class="secondary">Copy</button>
+      </div>
+      <div id="result"></div>
+    </section>
+
+    <footer>
+      EduGenie keeps your Gemini API key on the server. Do not paste secrets into the input.
+    </footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
